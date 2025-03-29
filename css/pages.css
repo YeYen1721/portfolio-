@@ -1668,9 +1668,7 @@
     }
 }
 
-/* Small mobile screens */
 @media (max-width: 375px) {
-    /* Improve navigation */
     .japan-title {
       top: 15px;
       left: 15px;
@@ -1690,7 +1688,6 @@
       font-size: 0.9rem;
     }
     
-    /* Card adjustments */
     .card {
       width: 280px;
       height: 420px;
@@ -1700,7 +1697,6 @@
       height: 450px;
     }
     
-    /* Controls and pagination */
     .controls {
       gap: 40px;
       margin-top: 40px;
@@ -1716,7 +1712,6 @@
       margin-top: 20px;
     }
     
-    /* Expanded card improvements */
     .expanded-card {
       width: 95% !important;
       height: 90% !important;
@@ -1734,7 +1729,6 @@
       font-size: 0.85rem;
     }
     
-    /* Slider improvements */
     .slider-track {
       height: 250px !important;
     }
@@ -1743,7 +1737,6 @@
       height: 250px !important;
     }
     
-    /* Image optimizations */
     .expanded-card img,
     .expanded-card .section-image img,
     .expanded-card .hero-image,
@@ -1755,7 +1748,6 @@
     }
   }
   
-  /* Safari-specific fixes */
   @supports (-webkit-touch-callout: none) {
     .page {
       height: -webkit-fill-available;
@@ -1766,39 +1758,34 @@
     }
   }
 
-/* Fix for mobile controls being covered by card */
 @media (max-width: 480px) {
-    /* Make card smaller */
     .card {
-      width: 230px; /* Reduced from 260px */
-      height: 330px; /* Reduced from 370px */
+      width: 230px;
+      height: 330px; 
     }
     
-    /* Adjust card content for smaller card */
     .card-content {
-      padding: 20px; /* Reduced padding */
+      padding: 20px;
     }
     
     .card-title {
-      font-size: 1.6rem; /* Smaller title */
+      font-size: 1.6rem;
       margin-bottom: 4px;
     }
     
     .card-subtitle {
-      font-size: 0.85rem; /* Smaller subtitle */
+      font-size: 0.85rem;
     }
     
-    /* Move controls down below the card */
     .controls {
       position: relative;
       z-index: 20;
-      margin-top: 350px; /* Reduced from 380px due to smaller card */
+      margin-top: 350px; 
       width: 100%;
       display: flex;
       justify-content: center;
     }
     
-    /* Move pagination below the controls */
     .pagination {
       position: relative;
       z-index: 20;
@@ -1807,14 +1794,12 @@
       justify-content: center;
     }
     
-    /* Adjust carousel height to account for repositioned elements */
     #home .carousel {
-      height: 340px; /* Reduced from 370px */
+      height: 340px; 
       margin-bottom: 30px;
       margin-top: 20px;
     }
     
-    /* Make sure the home page has enough space */
     #home {
       padding-bottom: 100px;
       overflow-y: auto;
@@ -1824,7 +1809,6 @@
       justify-content: center;
     }
     
-    /* Ensure card is positioned correctly */
     .card-container {
       position: absolute;
       top: 180px;
@@ -1837,19 +1821,18 @@
     }
   }
   
-  /* Further adjustments for very small screens */
   @media (max-width: 350px) {
     .card {
-      width: 200px; /* Even smaller for very small screens */
+      width: 200px;
       height: 290px;
     }
     
     .controls {
-      margin-top: 310px; /* Adjusted for smaller card */
+      margin-top: 310px;
     }
     
     #home .carousel {
-      height: 300px; /* Reduced height */
+      height: 300px;
     }
     
     .card-container {
@@ -1863,10 +1846,10 @@
     }
     
     .card-title {
-      font-size: 1.4rem; /* Even smaller title */
+      font-size: 1.4rem;
     }
     
     .card-subtitle {
-      font-size: 0.8rem; /* Even smaller subtitle */
+      font-size: 0.8rem;
     }
   }
