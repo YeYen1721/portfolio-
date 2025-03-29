@@ -206,46 +206,15 @@ Portfolio.data = {
         { 
             id: 3, 
             title: "Website", 
-            subtitle: "this website hehe", 
+            subtitle: "Coming soone", 
         },
         { 
             id: 4, 
             title: "Telfair Museum", 
-            subtitle: "Alpine Village", 
+            subtitle: "Coming soon", 
             image: "./mainpic/tmmain.jpg",
             heroImage: "./mainpic/tmmain.jpg",
             overview: "",
-
-            role: "UX/UI Designer, UX Researcher",
-            duration: "1 Day",
-            
-            overview: "",
-            
-            team: [
-                {name: "Hyunsoo Eun", role: "" },
-                {name: "Tyson Doering", role: "" },
-                {name: "Elena", role: "" },
-                {name: "Zoe Wang", role: "" }
-            ],
-            
-            roleCard: {
-                title: "My Role",
-                content: "Team Lead"
-            },
-            teamCard: {
-                title: "Team"
-            },
-            durationCard: {
-                title: "Timeline",
-                content: "10 weeks"
-            },
-            
-            sections: [
-                {
-                    title: "Understanding the Need for Change",
-                    content: ""
-                },
-            ]
         },
         { 
             id: 5, 
