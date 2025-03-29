@@ -206,7 +206,16 @@ Portfolio.data = {
         { 
             id: 3, 
             title: "Website", 
-            subtitle: "Coming soon", 
+            subtitle: "Coming soon",
+
+            role: "Developer",
+            
+            overview: "Project detail coming soon",
+            
+            roleCard: {
+                title: "My Role",
+                content: "Developer"
+            },
         },
         { 
             id: 4, 
