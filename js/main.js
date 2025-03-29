@@ -206,14 +206,14 @@ Portfolio.data = {
         { 
             id: 3, 
             title: "Website", 
-            subtitle: "Coming soone", 
+            subtitle: "Coming soon", 
         },
         { 
             id: 4, 
             title: "Telfair Museum", 
             subtitle: "Coming soon", 
-            image: "./mainpic/tmmain.jpg",
-            heroImage: "./mainpic/tmmain.jpg",
+            image: "./tmpic/tmmain.jpg",
+            heroImage: "./tmpic/tmmain.jpg",
             overview: "",
         },
         { 
