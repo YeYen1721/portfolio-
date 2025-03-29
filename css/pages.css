@@ -1648,3 +1648,101 @@
         width: 100%;
     }
 }
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+    /* Improve navigation */
+    .japan-title {
+      top: 15px;
+      left: 15px;
+    }
+    
+    .japan-title a {
+      font-size: 0.9rem;
+    }
+    
+    nav.main-nav {
+      top: 15px;
+      right: 15px;
+      gap: 15px;
+    }
+    
+    nav.main-nav a {
+      font-size: 0.9rem;
+    }
+    
+    /* Card adjustments */
+    .card {
+      width: 280px;
+      height: 420px;
+    }
+    
+    #home .carousel {
+      height: 450px;
+    }
+    
+    /* Controls and pagination */
+    .controls {
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .control-btn {
+      width: 45px;
+      height: 45px;
+    }
+    
+    .pagination {
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    /* Expanded card improvements */
+    .expanded-card {
+      width: 95% !important;
+      height: 90% !important;
+    }
+    
+    .expanded-card-content {
+      padding: 30px 20px !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .close-btn {
+      top: 15px !important;
+      right: 15px !important;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+    
+    /* Slider improvements */
+    .slider-track {
+      height: 250px !important;
+    }
+    
+    .before-after-container {
+      height: 250px !important;
+    }
+    
+    /* Image optimizations */
+    .expanded-card img,
+    .expanded-card .section-image img,
+    .expanded-card .hero-image,
+    .expanded-card .image-container img,
+    .expanded-card .image-grid img {
+      max-width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+  }
+  
+  /* Safari-specific fixes */
+  @supports (-webkit-touch-callout: none) {
+    .page {
+      height: -webkit-fill-available;
+    }
+    
+    .expanded-card-content {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
