@@ -217,7 +217,7 @@ Portfolio.data = {
                 content: "Developer"
             },
             
-            duration: "1 Day",
+            duration: "weeks",
             
             team: [
                 { name: "meeeee" }
@@ -228,7 +228,7 @@ Portfolio.data = {
                 content: "Developer"
             },
             teamCard: {
-                title: "Me"
+                title: "Team"
             },
             durationCard: {
                 title: "Timeline",
