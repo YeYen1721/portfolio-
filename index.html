@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minwook Shin</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/pages.css">
+    <link rel="stylesheet" href="./css/auto-fit-container.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="background-gradient"></div>
+    <div class="grid-overlay"></div>
+    <div class="vignette"></div>
+    <div class="particles" id="particles"></div>
+    
+    <div class="japan-title" style="display: block; opacity: 1; visibility: visible;">
+        <a href="#home" data-page="home" id="japanText" style="display: block; opacity: 1; visibility: visible;">Minwook</a>
+    </div>
+    
+    <nav class="main-nav">
+        <a href="#about" class="nav-link" data-page="about">About</a>
+    </nav>
+    
+    <div class="page active" id="home">
+        <div class="carousel">
+            <div class="card-container" id="cardContainer">
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-btn" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 5L8.5 12L15.5 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="control-btn" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 5L15.5 12L8.5 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="pagination">
+            <div class="page-indicator">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V20M12 4L6 10M12 4L18 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="paginationText">1/5</span>
+            </div>
+            <div class="page-indicator">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21C16.5 17 20 13.5 20 10C20 6.5 16.5 4 12 4C7.5 4 4 6.5 4 10C4 13.5 7.5 17 12 21Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="12" cy="10" r="2.5" stroke="white" stroke-width="2"/>
+                </svg>
+                81.09917°
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="page" id="about">
+        <div class="glass-card">
+            <div class="about-content">
+                <div class="about-image-section">
+                    <img src="./images/aboutmepic/me.JPG" alt="Original image" class="original-image">
+                    <img src="./images/aboutmepic/meme.JPG" alt="Hover image" class="hover-image">
+                </div>
+                
+                <div class="about-text-section">
+                    <h3>Who I ammmmmm</h3>
+                    <p><strong>More than a UI/UX designer, I'm a problem solver shaped by a diverse journey.</strong></p>
+                    
+                    <p>My path has taken me through the precision of medical studies, the strategic mindset of competitive volleyball, and the analytical depth of computer science. Each experience has given me a unique perspective on design—understanding human needs from a scientific lens, teamwork from the court, and structured problem-solving from coding. These disciplines have shaped how I approach UX, blending logic with creativity to craft experiences that are both intuitive and impactful.</p>
+                    
+                    <div class="education-info">
+                        <h4 class="education-title">BFA in User Experience Design</h4>
+                        <p class="education-school">Savannah College of Art and Design</p>
+                    </div>
+                    
+                    <div class="about-links">
+                        <a href="https://drive.google.com/file/d/1o1fUOut0wwJx118ouyEFDeKLG1qqp0gn/view" class="about-link" target="_blank" rel="noopener nonreferrer">Resume</a>
+                        <a href="https://www.linkedin.com/in/minwookshin/" class="about-link" target="_blank" rel="noopener nonreferrer">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/image-fixer.js"></script>
+    <script src="./js/specific-section-fix.js"></script>
+    <script src="./js/force-remove-sections.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        
+        if (isSafari) {
+            const japanTitle = document.querySelector('.japan-title');
+            const japanText = document.getElementById('japanText');
+            
+            if (japanTitle && japanText) {
+                japanTitle.style.display = 'block';
+                japanTitle.style.opacity = '1';
+                japanTitle.style.visibility = 'visible';
+                japanText.style.display = 'block';
+                japanText.style.opacity = '1';
+                japanText.style.visibility = 'visible';
+                
+                japanText.style.textShadow = '0 0 10px rgba(163, 148, 194, 0.4)';
+                
+                console.log("Safari compatibility mode activated for Japan title");
+            }
+        }
+    });
+    </script>
+</body>
+</html>
