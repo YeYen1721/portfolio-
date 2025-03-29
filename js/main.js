@@ -216,6 +216,24 @@ Portfolio.data = {
                 title: "My Role",
                 content: "Developer"
             },
+            
+            duration: "1 Day",
+            
+            team: [
+                { name: "meeeee" }
+            ],
+            
+            roleCard: {
+                title: "My Role",
+                content: "Developer"
+            },
+            teamCard: {
+                title: "Me"
+            },
+            durationCard: {
+                title: "Timeline",
+                content: "weeks"
+            },
         },
         { 
             id: 4, 
