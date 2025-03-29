@@ -8,8 +8,8 @@ Portfolio.data = {
             id: 1, 
             title: "Name Me", 
             subtitle: "Mini App Design Project", 
-            image: "./images/nmpic/nmmain.jpg",
-            heroImage: "./images/nmpic/nmmain.jpg",
+            image: "./nmpic/nmmain.jpg",
+            heroImage: "./nmpic/nmmain.jpg",
             
             role: "UX Designer, Interaction Designer",
             duration: "3 Days",
@@ -47,11 +47,11 @@ Portfolio.data = {
                     content: "How do you visualize something as abstract as identity and meaning? Our branding journey was full of sketches, mood boards, and debates over typography and colors. We wanted Name Me to feel like an intersection of the personal and the universal—something that feels as friendly as a conversation yet as powerful as a linguistic database.",
                     gallery: [
                         {
-                            src: "./images/nmpic/nmideation1.png",
+                            src: "./nmpic/nmideation1.png",
                             alt: "Ideation - Logo",
                         },
                         {
-                            src: "./images/nmpic/nmideation2.png",
+                            src: "./nmpic/nmideation2.png",
                             alt: "Ideation - Basic Design",
                         },
                     ]
@@ -60,7 +60,7 @@ Portfolio.data = {
                     title: "Design Process - Lofi",
                     content: "The low-fi phase was all about speed and structure. We stripped everything down to its bare essentials—what are the absolute must-haves? Users needed to be able to search, customize, and explore meanings without friction. Our early testers gave us invaluable insights, like the need for an intuitive search function and real-time name analysis.",
                     image: {
-                        src: "./images/nmpic/nmlowfi.png",
+                        src: "./nmpic/nmlowfi.png",
                         alt: "Wire frame - Lowfi",
                     }
                 },
@@ -68,7 +68,7 @@ Portfolio.data = {
                     title: "Design Process - Midfi Refinements",
                     content: "Now, things started to take shape. We layered in colors, refined the interactions, and built a seamless flow. Users told us they wanted a guided experience—so we introduced smart recommendations and contextual explanations. This wasn't just about listing names; it was about telling stories behind them.",
                     image: {
-                        src: "./images/nmpic/nmmidfi.png",
+                        src: "./nmpic/nmmidfi.png",
                         alt: "Wire frame - Midfi",
                     }
                 },
@@ -76,7 +76,7 @@ Portfolio.data = {
                     title: "Final Design - Highfi Flow",
                     content: "The final design was where everything clicked. We refined micro-interactions to make browsing feel smooth and natural. Our usability tests showed that people loved the ability to explore names through a blend of cultural references, phonetics, and personal preferences. We even had users tell us they discovered names they had never considered before—exactly the kind of discovery moment we were hoping to create.",
                     image: {
-                        src: "./images/nmpic/nmhififlow.png",
+                        src: "./nmpic/nmhififlow.png",
                         alt: "Wire frame - Highfi flow",
                     },
                 },
@@ -84,7 +84,7 @@ Portfolio.data = {
                     title: "Final Design - Highfi Concept",
                     content: "The final design was where everything clicked. We refined micro-interactions to make browsing feel smooth and natural. Our usability tests showed that people loved the ability to explore names through a blend of cultural references, phonetics, and personal preferences. We even had users tell us they discovered names they had never considered before—exactly the kind of discovery moment we were hoping to create.",
                     image: {
-                        src: "./images/nmpic/nmhificoncept.png",
+                        src: "./nmpic/nmhificoncept.png",
                         alt: "Wire frame - Highfi concept",
                     }
                 },
@@ -92,7 +92,7 @@ Portfolio.data = {
                     title: "Final Design - Vision",
                     content: "Name Me isn't just an app; it's a statement about inclusivity in communication. In a world where global conversations are more common than ever, we believe tools like this can help create connections that go beyond language barriers. Whether you're naming a project, a business, or even yourself, Name Me is here to guide you through the process with meaning and respect.",
                     image: {
-                        src: "./images/nmpic/nmmainfin.jpg",
+                        src: "./nmpic/nmmainfin.jpg",
                         alt: "Fin",
                     }
                 }
@@ -102,8 +102,8 @@ Portfolio.data = {
             id: 2, 
             title: "Google Nest Redesign", 
             subtitle: "Creating a Future Workplace Experience", 
-            image: "./images/nepic/nemain.jpg",
-            heroImage: "./images/nepic/nemain.jpg",
+            image: "./nepic/nemain.jpg",
+            heroImage: "./nepic/nemain.jpg",
             
             role: "UX Designer, Interaction Designer",
             duration: "10 Weeks",
@@ -140,11 +140,11 @@ Portfolio.data = {
                     content: "We focused on balancing personalization with teamwork. Employees can adjust climate and lighting based on their preferences while AI ensures overall comfort across shared spaces. The branding emphasizes a seamless, user-friendly experience that aligns with Google's design ethos.",
                     gallery: [
                         {
-                            src: "./images/nepic/nebranding1.png",
+                            src: "./nepic/nebranding1.png",
                             alt: "Typography",
                         },
                         {
-                            src: "./images/nepic/nebranding2.png",
+                            src: "./nepic/nebranding2.png",
                             alt: "Colors",
                         }
                     ]
@@ -154,11 +154,11 @@ Portfolio.data = {
                     content: "The low-fidelity designs prioritized accessibility and visibility. Key controls, such as temperature adjustment and mode selection, were made intuitive with high-contrast elements and clear iconography. This phase ensured a smooth interaction flow without unnecessary complexity.",
                     gallery: [
                         {
-                            src: "./images/nepic/newireframe.png",
+                            src: "./nepic/newireframe.png",
                             alt: "Wireframe",
                         },
                         {
-                            src: "./images/nepic/newireflow.png",
+                            src: "./nepic/newireflow.png",
                             alt: "Wireflow",
                         }
                     ]
@@ -168,11 +168,11 @@ Portfolio.data = {
                     content: "The high-fidelity design introduces an adaptive display that adjusts brightness and contrast based on ambient light. With smooth animations, haptic feedback, and real-time climate indicators, the interface creates an effortless experience for users looking to fine-tune their surroundings.",
                     gallery: [
                         {
-                            src: "./images/nepic/nedc1.png",
+                            src: "./nepic/nedc1.png",
                             alt: "Device Components",
                         },
                         {
-                            src: "./images/nepic/nedc2.png",
+                            src: "./nepic/nedc2.png",
                             alt: "Device Components",
                         }
                     ]
@@ -181,7 +181,7 @@ Portfolio.data = {
                     title: "Final Design - High Fidelity",
                     content: "The redesigned Google Nest app extends control beyond the physical device, enabling employees to adjust their workspace settings remotely. With AI-driven recommendations and real-time data visualization, users can optimize their environment with just a few taps. The app was designed with a focus on ease of use, ensuring that even non-tech-savvy users can seamlessly personalize their workspace.",
                     image: {
-                        src: "./images/nepic/nehifi1.png",
+                        src: "./nepic/nehifi1.png",
                         alt: "High-Fidelity App"
                     }
                 },
@@ -189,7 +189,7 @@ Portfolio.data = {
                     title: "Final Design - Device Interface",
                     content: "The high-fidelity design of the Google Nest device enhances user interaction with an intuitive and responsive interface. The device features an adaptive display that adjusts brightness based on ambient light, ensuring clear visibility at all times. Smooth animations and haptic feedback provide a tactile experience, reinforcing key actions such as temperature adjustments and mode switching. The dynamic temperature dial and real-time climate indicators make managing workplace comfort effortless and engaging.",
                     image: {
-                        src: "./images/nepic/nehifi2.png",
+                        src: "./nepic/nehifi2.png",
                         alt: "High-Fidelity Device"
                     }
                 },
@@ -197,7 +197,7 @@ Portfolio.data = {
                     title: "Final Vision - A Smarter, More Connected Workplace",
                     content: "Our Google Nest redesign transforms the office into an adaptive ecosystem where every employee has a voice in shaping their environment. Picture an office where employees no longer have to argue over the thermostat—Nest's AI-driven system learns from preferences and finds an optimal balance for everyone. By combining individual preference with collective cooperation, the system ensures comfort, efficiency, and sustainability in the workplace of the future.",
                     image: {
-                        src: "./images/nepic/nevision1.jpg",
+                        src: "./nepic/nevision1.jpg",
                         alt: "Final Design Vision"
                     }
                 }
@@ -212,8 +212,8 @@ Portfolio.data = {
             id: 4, 
             title: "Telfair Museum", 
             subtitle: "Alpine Village", 
-            image: "./images/mainpic/tmmain.jpg",
-            heroImage: "./images/mainpic/tmmain.jpg",
+            image: "./mainpic/tmmain.jpg",
+            heroImage: "./mainpic/tmmain.jpg",
             overview: "",
 
             role: "UX/UI Designer, UX Researcher",
@@ -251,8 +251,8 @@ Portfolio.data = {
             id: 5, 
             title: "GoodRead Redesign", 
             subtitle: "Enhancing Community Engagement for Readers", 
-            image: "./images/gdpic/gdmain.jpg",
-            heroImage: "./images/gdpic/gdmain.jpg",
+            image: "./gdpic/gdmain.jpg",
+            heroImage: "./gdpic/gdmain.jpg",
             
             role: "UX/UI Designer, UX Researcher",
             duration: "1 Day",
@@ -285,11 +285,11 @@ Portfolio.data = {
                     content: "We started by analyzing how users interact with book reviews. Feedback from the community highlighted the need for better organization, clearer UI elements, and a more engaging visual hierarchy. Our goal was to create an interface that feels modern, intuitive, and fosters interaction, all while maintaining the platform's familiar community-driven essence.",
                     gallery: [
                         {
-                            src: "./images/gdpic/gdbefore.png",
+                            src: "./gdpic/gdbefore.png",
                             alt: "Before review section",
                         },
                         {
-                            src: "./images/gdpic/gdbefore2.png",
+                            src: "./gdpic/gdbefore2.png",
                             alt: "Before Profile picture",
                         }
                     ]
@@ -298,7 +298,7 @@ Portfolio.data = {
                     title: "Initial Sketch",
                     content: "",
                     image: {
-                        src: "./images/gdpic/gdsketch.png",
+                        src: "./gdpic/gdsketch.png",
                         alt: "Initial Sketch"
                     }
                 },
@@ -306,7 +306,7 @@ Portfolio.data = {
                     title: "Wireframing & Low-Fidelity Prototyping",
                     content: "The low-fidelity wireframes set the foundation for a more streamlined experience. By focusing on readability, we implemented improved typography, collapsible sections, and clear call-to-action buttons. This phase ensured that navigation was intuitive, reducing cognitive load while enhancing usability.",
                     image: {
-                        src: "./images/gdpic/gdinfoarch.png",
+                        src: "./gdpic/gdinfoarch.png",
                         alt: "Low-Fidelity Wireframe"
                     }
                 },
@@ -314,7 +314,7 @@ Portfolio.data = {
                     title: "Final Design - High-Fidelity UI",
                     content: "The high-fidelity design brings the vision to life with a refined interface that feels welcoming and dynamic. We focused on bold yet minimalistic elements, ensuring an inclusive and community-oriented aesthetic. Interactive elements such as underlines, subtle shading, and collapsible sections improve readability and engagement. The redesigned layout ensures that reviews are easy to browse, empowering users to share their opinions effortlessly.",
                     image: {
-                        src: "./images/gdpic/gdmain.jpg",
+                        src: "./gdpic/gdmain.jpg",
                         alt: "High-Fidelity UI"
                     }
                 },
@@ -326,9 +326,9 @@ Portfolio.data = {
                     title: "Vision Video",
                     content: "",
                     video: {
-                        src: "./images/gdpic/FLuxathon_Pranav&Min.mp4",
+                        src: "./gdpic/FLuxathon_Pranav&Min.mp4",
                         type: "video/mp4",
-                        poster: "./images/gdpic/FLuxathon_Pranav&Min.mp4",
+                        poster: "./gdpic/FLuxathon_Pranav&Min.mp4",
                         size: "full", 
                         autoplay: false,
                         muted: false,
