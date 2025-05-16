@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Minwook Shin</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="back-link">
+                <img src="img/arrowgray.png" alt="←" class="back-arrow">
+                <span>Back</span>
+            </a>
+            <h1 class="title" id="project-title">Project Title</h1>
+        </header>
+        
+        <div class="content">
+            <div class="project-hero">
+                <img src="img/project-placeholder.jpg" alt="Project Preview" class="hero-image" id="project-hero-image">
+            </div>
+            
+            <div class="project-details">
+                <div class="project-info">
+                    <div class="info-item">
+                        <h3>Role</h3>
+                        <p id="project-role">Design & Development</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Timeline</h3>
+                        <p id="project-timeline">2023</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Team</h3>
+                        <p id="project-team">HTML/CSS, JavaScript, Figma</p>
+                    </div>
+                </div>
+                <div class="project-overview">
+                    <h3>Overview</h3>
+                    <p id="project-overview">A brief description of the project will appear here.</p>
+                </div>
+            </div>
+            
+            <!-- This div will be filled dynamically with mixed content sections -->
+            <div class="project-content">
+                <!-- Text and gallery sections will be inserted here by JavaScript -->
+            </div>
+            
+            <div class="project-navigation">
+                <a href="#" class="prev-project" id="prev-project-link">
+                    <img src="img/arrowgray.png" alt="←" class="nav-arrow">
+                    <span id="prev-project-name">Previous Project</span>
+                </a>
+                <a href="#" class="next-project" id="next-project-link">
+                    <span id="next-project-name">Next Project</span>
+                    <img src="img/arrowgray.png" alt="→" class="nav-arrow">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/project.js"></script>
+</body>
+</html>
