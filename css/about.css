@@ -1,0 +1,137 @@
+/* About page styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #ededed;
+    color: #696969;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    color: #696969;
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: absolute;
+    left: 0;
+}
+
+.back-arrow {
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    color: #696969;
+}
+
+/* Content styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Profile section */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #696969;
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info .subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #696969;
+}
+
+/* Bio section */
+.bio p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Contact section */
+.contact a {
+    color: #696969;
+    text-decoration: none;
+    border-bottom: 1px solid #696969;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.contact a:hover {
+    opacity: 0.7;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    border-bottom: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .skills ul {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
