@@ -1,19 +1,10 @@
-// Project page JavaScript with overview section
+// Project page JavaScript - Updated without authentication
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Project page loaded');
 
     // Get the project parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('project') || 'flux'; // Default to flux if no project specified
-    
-    // Check if user is authenticated for this project
-    const isAuthenticated = sessionStorage.getItem(`auth_${projectId}`) === 'true';
-    
-    // If not authenticated, redirect to password page
-    if (!isAuthenticated) {
-        window.location.href = `password.html?project=${projectId}`;
-        return;
-    }
     
     // Project data with mixed content sections and overview added
     const projectData = {
@@ -23,9 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             role: "Website Officer",
             timeline: "Work in progress",
             team: "FLUX officer",
-
             overview: "Work in progress",
-            
+            contentSections: [], // Add content sections if needed
             prev: {name: "Google Nest", link: "project.html?project=nest"},
             next: {name: "Telfair Museum", link: "project.html?project=telfair"}
         },
@@ -158,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     type: 'text',
-                    content: "The Telfair Museum’s digital platform will evolve into an inclusive cultural gateway—seamlessly blending historical depth with intuitive, contemporary design. It will serve as a dynamic hub for community engagement, learning, and artistic exploration for both local and global audiences."
+                    content: "The Telfair Museum's digital platform will evolve into an inclusive cultural gateway—seamlessly blending historical depth with intuitive, contemporary design. It will serve as a dynamic hub for community engagement, learning, and artistic exploration for both local and global audiences."
                 },
                 {
                     type: 'gallery',
@@ -422,22 +412,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Update next/prev links to pass through password protection if needed
+    // Simple navigation links - no authentication needed
     const navLinks = document.querySelectorAll('.project-navigation a');
     navLinks.forEach(link => {
-        // Get the project ID from the href
-        const href = link.getAttribute('href');
-        const hrefParams = new URLSearchParams(href.split('?')[1]);
-        const nextProjectId = hrefParams.get('project');
-        
-        // Check if user is already authenticated for this project
-        const isNextAuthenticated = sessionStorage.getItem(`auth_${nextProjectId}`) === 'true';
-        
-        // If not authenticated, redirect through password page
-        if (!isNextAuthenticated) {
-            link.href = `password.html?project=${nextProjectId}`;
-        }
-        
         link.addEventListener('click', function(e) {
             // Add transition effect
             document.body.classList.add('page-transition');
@@ -470,87 +447,89 @@ document.addEventListener('DOMContentLoaded', function() {
         contentContainer.innerHTML = '';
         
         // Add all content sections in order
-        project.contentSections.forEach((section, sectionIndex) => {
-            if (section.type === 'text') {
-                // Create text section
-                const textSection = document.createElement('div');
-                textSection.className = 'project-text-section';
-                
-                const paragraph = document.createElement('p');
-                paragraph.textContent = section.content;
-                paragraph.className = 'project-paragraph';
-                
-                textSection.appendChild(paragraph);
-                contentContainer.appendChild(textSection);
-            }
-            else if (section.type === 'gallery') {
-                // Create gallery section
-                const gallerySection = document.createElement('div');
-                gallerySection.className = 'project-gallery';
-                
-                // Add all images in this gallery
-                section.images.forEach((item, imageIndex) => {
-                    const figure = document.createElement('figure');
-                    figure.className = 'gallery-item';
+        if (project.contentSections) {
+            project.contentSections.forEach((section, sectionIndex) => {
+                if (section.type === 'text') {
+                    // Create text section
+                    const textSection = document.createElement('div');
+                    textSection.className = 'project-text-section';
                     
-                    // Add span classes if specified
-                    if (item.span === 2) {
-                        figure.classList.add('span-2');
-                    } else if (item.span === 'full') {
-                        figure.classList.add('full-width');
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = section.content;
+                    paragraph.className = 'project-paragraph';
+                    
+                    textSection.appendChild(paragraph);
+                    contentContainer.appendChild(textSection);
+                }
+                else if (section.type === 'gallery') {
+                    // Create gallery section
+                    const gallerySection = document.createElement('div');
+                    gallerySection.className = 'project-gallery';
+                    
+                    // Add all images in this gallery
+                    section.images.forEach((item, imageIndex) => {
+                        const figure = document.createElement('figure');
+                        figure.className = 'gallery-item';
+                        
+                        // Add span classes if specified
+                        if (item.span === 2) {
+                            figure.classList.add('span-2');
+                        } else if (item.span === 'full') {
+                            figure.classList.add('full-width');
+                        }
+                        
+                        const img = document.createElement('img');
+                        img.className = 'gallery-image';
+                        img.src = item.image;
+                        img.alt = `${project.title} Detail - ${item.caption}`;
+                        
+                        const figcaption = document.createElement('figcaption');
+                        figcaption.textContent = item.caption;
+                        
+                        figure.appendChild(img);
+                        figure.appendChild(figcaption);
+                        gallerySection.appendChild(figure);
+                    });
+                    
+                    contentContainer.appendChild(gallerySection);
+                }
+                else if (section.type === 'video') {
+                    // Create video section
+                    const videoSection = document.createElement('div');
+                    videoSection.className = 'project-video-section';
+                    
+                    // Create video container with responsive aspect ratio
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = 'video-container';
+                    
+                    // Set aspect ratio if specified
+                    if (section.aspectRatio) {
+                        videoContainer.style.aspectRatio = section.aspectRatio;
                     }
                     
-                    const img = document.createElement('img');
-                    img.className = 'gallery-image';
-                    img.src = item.image;
-                    img.alt = `${project.title} Detail - ${item.caption}`;
+                    // Create iframe for the video
+                    const iframe = document.createElement('iframe');
+                    iframe.src = section.url;
+                    iframe.title = section.caption || 'Project video';
+                    iframe.allowFullscreen = true;
+                    iframe.frameBorder = "0";
+                    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
                     
-                    const figcaption = document.createElement('figcaption');
-                    figcaption.textContent = item.caption;
+                    // Add caption if available
+                    videoContainer.appendChild(iframe);
+                    videoSection.appendChild(videoContainer);
                     
-                    figure.appendChild(img);
-                    figure.appendChild(figcaption);
-                    gallerySection.appendChild(figure);
-                });
-                
-                contentContainer.appendChild(gallerySection);
-            }
-            else if (section.type === 'video') {
-                // Create video section
-                const videoSection = document.createElement('div');
-                videoSection.className = 'project-video-section';
-                
-                // Create video container with responsive aspect ratio
-                const videoContainer = document.createElement('div');
-                videoContainer.className = 'video-container';
-                
-                // Set aspect ratio if specified
-                if (section.aspectRatio) {
-                    videoContainer.style.aspectRatio = section.aspectRatio;
+                    if (section.caption) {
+                        const caption = document.createElement('p');
+                        caption.className = 'video-caption';
+                        caption.textContent = section.caption;
+                        videoSection.appendChild(caption);
+                    }
+                    
+                    contentContainer.appendChild(videoSection);
                 }
-                
-                // Create iframe for the video
-                const iframe = document.createElement('iframe');
-                iframe.src = section.url;
-                iframe.title = section.caption || 'Project video';
-                iframe.allowFullscreen = true;
-                iframe.frameBorder = "0";
-                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-                
-                // Add caption if available
-                videoContainer.appendChild(iframe);
-                videoSection.appendChild(videoContainer);
-                
-                if (section.caption) {
-                    const caption = document.createElement('p');
-                    caption.className = 'video-caption';
-                    caption.textContent = section.caption;
-                    videoSection.appendChild(caption);
-                }
-                
-                contentContainer.appendChild(videoSection);
-            }
-        });
+            });
+        }
         
         // Update navigation links
         const prevLink = document.getElementById('prev-project-link');
